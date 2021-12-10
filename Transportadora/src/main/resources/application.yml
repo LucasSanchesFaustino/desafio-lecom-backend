@@ -1,0 +1,21 @@
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  datasource:
+    password: 1298
+    username: root
+    url: jdbc:mysql://localhost:3306/transportadora
+  jpa:
+    hibernate:
+      ddl-auto: update
+  application:
+    name: Transportadora

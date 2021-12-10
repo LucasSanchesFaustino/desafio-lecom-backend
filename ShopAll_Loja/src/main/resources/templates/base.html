@@ -1,0 +1,83 @@
+<head th:fragment="head">
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilo.css">
+	
+	<title>ShopAll</title>
+
+	<style>
+		.logo-container {
+			background-color: #47bcff;
+			color:#FFF;
+		}
+		
+		.logo {
+			font-family: 'Roboto', sans-serif;
+			font-size: 2.5rem;
+		}
+		.menu_item{
+			font-family: 'Roboto', sans-serif;
+			font-size: 20px;
+			margin-right: 5px;
+		}
+		.rodape_texto{
+			font-family: 'Roboto', sans-serif;
+			font-size: 18px;
+		}
+		.rodape_subtexto{
+			font-family: 'Roboto', sans-serif;
+			font-size: 15px;
+		}
+		body{ 
+  			display:flex; 
+  			flex-direction:column; 
+  			height:100vh;
+  			margin:0;
+		}
+		footer{
+ 			margin-top:auto; 
+		}
+	</style>
+</head>
+
+<div th:fragment="logo" class="">
+	<div class="logo-container p-3 d-flex justify-content-between">
+		<span class="logo ml-2">ShopAll</span>
+		<span class="mt-3 mr-2">
+			
+		</span>
+	</div>
+	<div>
+		<div class="col">
+			<nav class="nav">
+			  <a class="menu_item text-decoration-none" th:href="@{/home}">Home</a>
+			  <a class="menu_item text-decoration-none" th:href="@{/pedido/home}">Pedidos</a>
+			  <a class="menu_item text-decoration-none" th:href="@{/catalogo}">Catálogo</a>
+			  <a class="menu_item text-decoration-none" th:href="@{/transporte/info}">Transportadora</a>
+			</nav>
+		</div>
+	</div>
+</div>
+
+<div th:fragment="rodape" class="" style="margin-top: 350px;"> <!--  POG(Programação Orientada a Gambiarra) pro rodapé parar quieto no fundo da página  -->
+	<footer class="text-center text-white" style="background-color: #47bcff">
+			<div class="container pt-0 pb-0">
+						<div class="row d-flex justify-content-center">
+							<div class="col-auto"> 
+								<p class="rodape_texto pt-0">ShopAll - Sua Melhor Solução em Comércio Eletrônico</p>
+								<p class="rodape_subtexto pt-0">Rua José Amélio Silva, n° 130 - Centro - Pirajuí - São Paulo</p>
+								<p class="rodape_subtexto pt-0">CNPJ: 10.046.865/0001-02</p>
+							</div>
+						</div>
+			</div>
+			<div class="rodape_subtexto text-center pt-0 pb-2"
+				style="background-color: #47bcff">
+				© 2021 Copyright: <a class="text-white">ShopAll&trade;</a>
+			</div>
+	</footer>
+</div>

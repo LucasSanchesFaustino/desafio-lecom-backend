@@ -1,0 +1,39 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8">
+<title>ShopAll</title>
+</head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+
+
+	
+
+	<div class="container pt-2">
+		<div class="pt-2">
+			<h2>Transportadoras parceiras:</h2>
+		</div>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Nome da Transportadora</th>
+					<th scope="col">Endereço da Filial</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="transportadora : ${transportadora}">
+					<td th:text="${transportadora.nome}">Nome da Transportadora</td>
+					<td th:text="${transportadora.endereco} + ${', '} + ${transportadora.estado}">Endereço da Transportadora</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>	
+			<a class="btn btn-outline-primary nav-item" th:href="@{/transporte/listar}">Listar os Pedidos Em Transporte</a>
+		</div>
+	</div>
+
+
+	<div th:replace="~{base :: rodape}"></div>
+</body>
+</html>

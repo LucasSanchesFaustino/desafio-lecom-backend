@@ -1,0 +1,61 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8">
+<title>ShopAll</title>
+</head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+	<div class="container pt-2">
+		<div class="pt-2">
+			<h2>Para Alterar um Pedido:</h2>
+			<form th:action="@{editar/novo}" class="card-body" method="post">
+				<div class="form-group">
+					<input th:value="${transporteEditar.codigoPedido}" class="form-control" placeholder="Código do Pedido" name="codigoPedido" /> 
+					<small>Informe o Código do Pedido a Ser Editado.</small>
+				</div>
+				<div class="form-group"> 
+				<small>Selecione o Status:</small>
+				<select class="form-select" th:object=${transporteEditar} th:field="*{statusDoPedido}">
+  					<option th:value="Preparando">Preparando</option>
+  					<option th:value="Encaminhado">Encaminhado</option>
+ 					<option th:value="Entregue">Entregue</option>
+				</select>
+				</div>
+				<button class="btn btn-outline-primary" type="submit">Alterar</button>
+			</form>
+		</div>
+		<div class="pt-2">
+			<h2>Pedidos Ativos:</h2>
+		</div>
+		<div class="pt-2">
+		<table class="table">
+			<thead>
+				<tr>
+					<th style="width: 200px; text-align: center" scope="col">Código
+						do Pedido</th>
+					<th style="text-align: center" scope="col">Código de Rastreio</th>
+					<th style="width: 320px; text-align: center" scope="col">Endereço
+						de Entrega</th>
+					<th style="text-align: center" scope="col">Status do Pedido</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="transporte : ${transportes}">
+					<td style="text-align: center" th:text="${transporte.codigoPedido}">Código
+						do Pedido</td>
+					<td style="text-align: center"
+						th:text="${transporte.codigoRastreio}">Código de Rastreio</td>
+					<td style="text-align: center"
+						th:text="${transporte.enderecoDestino}">Endereço de Entrega</td>
+					<td style="text-align: center"
+						th:text="${transporte.statusDoPedido}">Status do Pedido</td>
+				</tr>
+			</tbody>
+		</table>
+		<input class="btn btn-outline-primary" type="button" value="Voltar"
+			onclick="location.href='listar'" />
+	</div>
+	</div>
+	<div th:replace="~{base :: rodape}"></div>
+</body>
+</html>

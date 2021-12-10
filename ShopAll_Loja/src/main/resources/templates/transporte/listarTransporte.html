@@ -1,0 +1,44 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8">
+</head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+	
+	
+	<div class="container pt-2">
+	<div class="pt-2"><h2>Pedidos Recebidos pela Transportadora:</h2></div>
+	
+	<div class="pt-2"><h4>Filtrar Tabela</h4></div>
+
+	<div>	
+		<a th:classappend="${status} == null ? 'active'" class="btn btn-outline-primary nav-item" th:href="@{/transporte/listar}">Todos</a>
+		<a th:classappend="${status} == Preparando ? 'active'" class="btn btn-outline-primary nav-item" th:href="@{/transporte/Preparando}">Preparando</a>
+		<a th:classappend="${status} == Encaminhado ? 'active'" class="btn btn-outline-primary nav-item" th:href="@{/transporte/Encaminhado}">Encaminhado</a>
+		<a th:classappend="${status} == Entregue ? 'active'" class="btn btn-outline-primary nav-item" th:href="@{/transporte/Entregue}">Entregue</a>
+	</div>
+
+	<table class="table">
+  		<thead>
+    		<tr>
+    			<th scope="col">Código do Pedido</th>
+      			<th scope="col">Código de Rastreio</th>
+      			<th scope="col">Endereço de Entrega</th>
+      			<th scope="col">Status</th>
+    		</tr>
+  		</thead>
+  		<tbody>
+    		<tr th:each="transporte : ${transportes}">
+    			<td th:text="${transporte.codigoPedido}">Código do Pedido</td>
+    			<td th:text="${transporte.codigoRastreio}">Código de Rastreio</td>
+      			<td th:text="${transporte.enderecoDestino}">Endereço de Entrega</td>
+      			<td th:text="${transporte.statusDoPedido}">Status do Pedido</td>
+    		</tr>
+  		</tbody>
+	</table>
+	<input class="btn btn-outline-primary" type="button" value="Voltar" onclick="location.href='info'" />
+	<input class="btn btn-outline-primary" type="button" value="Editar Status do Pedido" onclick="location.href='editar'" />
+	</div>
+	<div th:replace="~{base :: rodape}"></div>
+</body>
+</html>

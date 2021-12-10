@@ -1,0 +1,43 @@
+<html>
+<head th:replace="~{base :: head}">
+<meta charset="UTF-8">
+<title>ShopAll</title>
+</head>
+<body>
+	<div th:replace="~{base :: logo}"></div>
+	
+	<div class="container pt-2">
+	
+	<div class="pt-2"><h2>Pedidos:</h2></div>
+	
+	<table class="table">
+  		<thead>
+    		<tr>
+    			<th style="width: 200px; text-align: center" scope="col">Código do Pedido</th>
+      			<th style="text-align: center" scope="col">Cliente</th>
+      			<th style="text-align: center" scope="col">Produto</th>
+      			<th style="width: 220px; text-align: center" scope="col">Código do Produto</th>
+      			<th style="width: 100px; text-align: center" scope="col">Quantidade</th>
+      			<th style="width: 140px; text-align: center" scope="col">Valor Total</th>
+      			<th style="text-align: center" scope="col">Endereço de Destino</th>
+      			<th style="text-align: center" scope="col">Status</th>
+    		</tr>
+  		</thead>
+  		<tbody>
+    		<tr th:each="pedidos : ${pedidos}">
+    			<td style="text-align: center" th:text="${pedidos.codigoPedido}">Código do Pedido</td>
+    			<td style="text-align: center" th:text="${pedidos.nomeCliente}">Cliente</td>
+      			<td style="text-align: center" th:text="${pedidos.itensDoPedido[0].nomeProduto}">Produto</td>
+      			<td style="text-align: center" th:text="${pedidos.itensDoPedido[0].codigoDoProduto}">Código do Produto</td>
+    		 	<td style="text-align: center" th:text="${pedidos.itensDoPedido[0].quantidade}">Quantidade</td>
+      			<td style="width:100px; text-align: center" th:text="${'R$ '} + ${pedidos.itensDoPedido[0].valor}">Valor</td>
+      			<td style="width:320px; text-align: center" th:text="${pedidos.enderecoDestino}">Endereço</td>
+      			<td th:text="${pedidos.statusDoPedido}">Status da Venda</td>
+    		</tr>
+  		</tbody>
+	</table>
+	<input class="btn btn-outline-primary" type="button" value="Voltar" onclick="location.href='home'" />
+	</div>
+	<div th:replace="~{base :: rodape}"></div>
+</body>
+</html>

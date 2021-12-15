@@ -18,7 +18,7 @@ public class Pedido {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String codigoPedido;
+	private Integer codigoPedido;
 	
 	private String nomeCliente;
 	
@@ -47,11 +47,11 @@ public class Pedido {
 		this.id = id;
 	}
 
-	public String getCodigoPedido() {
+	public Integer getCodigoPedido() {
 		return codigoPedido;
 	}
 
-	public void setCodigoPedido(String codigoPedido) {
+	public void setCodigoPedido(Integer codigoPedido) {
 		this.codigoPedido = codigoPedido;
 	}
 
@@ -66,8 +66,6 @@ public class Pedido {
 	public List<ItemPedido> getItensDoPedido() {
 		return itensDoPedido;
 	}
-
-	
 	
 	public void setItensDoPedido(List<ItemPedido> itensDoPedido) {
 		this.itensDoPedido = itensDoPedido;

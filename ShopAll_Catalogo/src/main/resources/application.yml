@@ -19,3 +19,11 @@ spring:
       ddl-auto: update
   application:
     name: Catalogo
+    
+  flyway:
+    url: jdbc:mysql://localhost:3306/
+    schemas:
+    - catalogo
+    user: root
+    password: 1298
+    baseline-on-migrate: true

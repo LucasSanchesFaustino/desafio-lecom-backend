@@ -18,5 +18,5 @@ public interface CatalogoClient {
 	List<ProdutoDTO> getProdutoAll();
 	
 	@RequestMapping("/produto/listar/{codigo}")
-	ProdutoDTO getProdutoPorCodigo(@PathVariable String codigo);
+	ProdutoDTO getProdutoPorCodigo(@PathVariable Integer codigo);
 }

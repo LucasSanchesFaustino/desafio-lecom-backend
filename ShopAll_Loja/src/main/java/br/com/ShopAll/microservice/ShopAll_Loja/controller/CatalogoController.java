@@ -20,7 +20,7 @@ public class CatalogoController {
 	private CatalogoClient catalogoClient;
 
 	@GetMapping
-	public String home(Model model) {
+	public String listarTudo(Model model) {
 		List<ProdutoDTO> produtos = catalogoClient.getProdutoAll();
 		model.addAttribute("produtos", produtos);
 		return "catalogo/home";

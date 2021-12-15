@@ -1,5 +1,4 @@
 
-
 server:
   port: 8080
   
@@ -20,3 +19,11 @@ spring:
       ddl-auto: update
   application:
     name: Loja
+    
+  flyway:
+    url: jdbc:mysql://localhost:3306/
+    schemas:
+    - loja
+    user: root
+    password: 1298
+    baseline-on-migrate: true

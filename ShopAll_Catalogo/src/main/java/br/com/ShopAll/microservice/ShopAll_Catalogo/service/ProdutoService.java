@@ -22,7 +22,7 @@ public class ProdutoService {
 		return produtoRepository.findByCategoria(categoria);
 	}
 
-	public Produto getInfoProdutoPorCodigo(String codigo) {
+	public Produto getInfoProdutoPorCodigo(Integer codigo) {
 		return produtoRepository.findByCodigo(codigo);
 	}
 	

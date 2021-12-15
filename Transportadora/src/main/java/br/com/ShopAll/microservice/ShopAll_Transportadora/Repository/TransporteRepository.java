@@ -12,6 +12,6 @@ public interface TransporteRepository extends JpaRepository<Transporte, Long> {
 
 	List<Transporte> findByStatusDoPedido(String status);
 
-	Transporte findByCodigoPedido(String codigo);
+	Transporte findByCodigoPedido(Integer codigo);
 	
 }

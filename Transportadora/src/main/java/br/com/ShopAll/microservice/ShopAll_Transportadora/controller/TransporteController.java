@@ -35,7 +35,7 @@ public class TransporteController {
 	}
 	
 	@RequestMapping("/listar/{codigoPedido}")
-	public Transporte getTransportePorCodigoPedido(@PathVariable String codigoPedido) {
+	public Transporte getTransportePorCodigoPedido(@PathVariable Integer codigoPedido) {
 		return transporteService.getTransportePorCodigoPedido(codigoPedido);
 	}
 	

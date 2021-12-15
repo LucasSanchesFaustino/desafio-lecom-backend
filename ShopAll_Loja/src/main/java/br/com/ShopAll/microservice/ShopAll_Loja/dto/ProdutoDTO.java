@@ -4,11 +4,11 @@ public class ProdutoDTO {
 
 	private String nomeProduto;
 
-	private String codigo;
+	private Integer codigo;
 	
 	private String descricao;
 
-	private String valorProduto;
+	private Double valorProduto;
 
 	private String categoria;
 
@@ -20,11 +20,11 @@ public class ProdutoDTO {
 		this.nomeProduto = nomeProduto;
 	}
 
-	public String getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 
@@ -36,11 +36,11 @@ public class ProdutoDTO {
 		this.descricao = descricao;
 	}
 
-	public String getValorProduto() {
+	public Double getValorProduto() {
 		return valorProduto;
 	}
 
-	public void setValorProduto(String valorProduto) {
+	public void setValorProduto(Double valorProduto) {
 		this.valorProduto = valorProduto;
 	}
 

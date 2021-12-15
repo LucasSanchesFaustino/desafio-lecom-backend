@@ -28,7 +28,7 @@ public class ProdutoController {
 	}
 	
 	@RequestMapping("/listar/{codigo}")
-	public Produto getProdutoPorCodigo(@PathVariable String codigo) {
+	public Produto getProdutoPorCodigo(@PathVariable Integer codigo) {
 		return produtoService.getInfoProdutoPorCodigo(codigo);
 	}
 

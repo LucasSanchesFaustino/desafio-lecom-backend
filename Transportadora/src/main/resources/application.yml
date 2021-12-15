@@ -19,3 +19,11 @@ spring:
       ddl-auto: update
   application:
     name: Transportadora
+    
+  flyway:
+    url: jdbc:mysql://localhost:3306/
+    schemas:
+    - transportadora
+    user: root
+    password: 1298
+    baseline-on-migrate: true

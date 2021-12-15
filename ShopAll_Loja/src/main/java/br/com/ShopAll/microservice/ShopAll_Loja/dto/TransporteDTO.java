@@ -2,9 +2,9 @@ package br.com.ShopAll.microservice.ShopAll_Loja.dto;
 
 public class TransporteDTO {
 
-	private String codigoPedido;
+	private Integer codigoPedido;
 	
-	private String codigoRastreio;
+	private Integer codigoRastreio;
 	
 	private String statusDoPedido;
 	
@@ -14,7 +14,7 @@ public class TransporteDTO {
 		super();
 	}
 	
-	public TransporteDTO(String codigoPedido, String codigoRastreio, String statusDoPedido, String enderecoDestino) {
+	public TransporteDTO(Integer codigoPedido, Integer codigoRastreio, String statusDoPedido, String enderecoDestino) {
 		super();
 		this.codigoPedido = codigoPedido;
 		this.codigoRastreio = codigoRastreio;
@@ -22,19 +22,19 @@ public class TransporteDTO {
 		this.enderecoDestino = enderecoDestino;
 	}
 
-	public String getCodigoPedido() {
+	public Integer getCodigoPedido() {
 		return codigoPedido;
 	}
 
-	public void setCodigoPedido(String codigoPedido) {
+	public void setCodigoPedido(Integer codigoPedido) {
 		this.codigoPedido = codigoPedido;
 	}
 
-	public String getCodigoRastreio() {
+	public Integer getCodigoRastreio() {
 		return codigoRastreio;
 	}
 
-	public void setCodigoRastreio(String codigoRastreio) {
+	public void setCodigoRastreio(Integer codigoRastreio) {
 		this.codigoRastreio = codigoRastreio;
 	}
 

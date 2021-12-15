@@ -13,27 +13,27 @@ public class Transporte {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String codigoPedido;
+	private Integer codigoPedido;
 	
-	private String codigoRastreio;
+	private Integer codigoRastreio;
 	
 	private String statusDoPedido;
 	
 	private String enderecoDestino;
 
-	public String getCodigoPedido() {
+	public Integer getCodigoPedido() {
 		return codigoPedido;
 	}
 
-	public void setCodigoPedido(String codigoPedido) {
+	public void setCodigoPedido(Integer codigoPedido) {
 		this.codigoPedido = codigoPedido;
 	}
 
-	public String getCodigoRastreio() {
+	public Integer getCodigoRastreio() {
 		return codigoRastreio;
 	}
 
-	public void setCodigoRastreio(String codigoRastreio) {
+	public void setCodigoRastreio(Integer codigoRastreio) {
 		this.codigoRastreio = codigoRastreio;
 	}
 

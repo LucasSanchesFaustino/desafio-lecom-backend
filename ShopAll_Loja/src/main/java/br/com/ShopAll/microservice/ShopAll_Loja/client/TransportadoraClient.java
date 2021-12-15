@@ -30,7 +30,7 @@ public interface TransportadoraClient {
 	List<TransporteDTO> getTransportePorStatus(@PathVariable String status);
 
 	@RequestMapping("/transporte/listar/{codigoPedido}")
-	TransporteDTO getTransportePorCodigoPedido(@PathVariable String codigo);
+	TransporteDTO getTransportePorCodigoPedido(@PathVariable Integer codigo);
 
 	@PostMapping("/transporte/editar/novo")
 	TransporteDTO updateTransporte(@RequestBody TransporteDTO transporte);

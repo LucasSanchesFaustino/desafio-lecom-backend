@@ -26,7 +26,7 @@ public class TransporteService {
 		transporteRepository.save(transporte);
 	}
 
-	public Transporte getTransportePorCodigoPedido(String codigoPedido) {
+	public Transporte getTransportePorCodigoPedido(Integer codigoPedido) {
 
 		return transporteRepository.findByCodigoPedido(codigoPedido);
 	}

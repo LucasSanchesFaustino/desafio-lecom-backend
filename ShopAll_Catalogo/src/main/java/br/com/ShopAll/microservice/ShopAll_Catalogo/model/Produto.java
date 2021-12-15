@@ -17,11 +17,11 @@ public class Produto {
 	
 	private String descricao;
 	
-	private String valorProduto;
+	private Double valorProduto;
 	
 	private String categoria;
 	
-	private String codigo;
+	private Integer codigo;
 	
 	public String getNomeProduto() {
 		return nomeProduto;
@@ -39,11 +39,11 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public String getValorProduto() {
+	public Double getValorProduto() {
 		return valorProduto;
 	}
 
-	public void setValorProduto(String valorProduto) {
+	public void setValorProduto(Double valorProduto) {
 		this.valorProduto = valorProduto;
 	}
 
@@ -55,11 +55,11 @@ public class Produto {
 		this.categoria = categoria;
 	}
 
-	public String getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 }

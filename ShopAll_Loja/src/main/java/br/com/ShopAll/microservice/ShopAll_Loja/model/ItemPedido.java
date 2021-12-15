@@ -18,13 +18,13 @@ public class ItemPedido {
 	
 	private String nomeProduto;
 	
-	private String valor;
+	private Double valor;
 	
 	public ItemPedido() {
 		super();
 	}
 
-	public ItemPedido(Integer quantidade, String nomeDoProduto, String valor) {
+	public ItemPedido(Integer quantidade, String nomeDoProduto, Double valor) {
 		super();
 		this.quantidade = quantidade;
 		this.nomeProduto = nomeDoProduto;
@@ -63,11 +63,11 @@ public class ItemPedido {
 		this.nomeProduto = nomeProduto;
 	}
 
-	public String getValor() {
+	public Double getValor() {
 		return valor;
 	}
 
-	public void setValor(String valor) {
+	public void setValor(Double valor) {
 		this.valor = valor;
 	}
 }

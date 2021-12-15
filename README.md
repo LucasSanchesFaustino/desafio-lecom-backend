@@ -15,4 +15,4 @@ Já a parte front-end foi toda feita em HTML com o uso do Framework Bootstrap, c
 # Banco de dados
 
 As tabelas do banco de dados do projeto são automaticamente geradas e populadas atráves da ferramenta Flyway.
-Apenas troque a url e as informações do banco de dados no application.yml dos microsserviços.
+Apenas troque a url e as informações do banco de dados no application.yml dos microsserviços antes de executar o projeto.

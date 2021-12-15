@@ -11,7 +11,7 @@ eureka:
 
 spring:
   datasource:
-    password: 1298
+    password: root
     username: root
     url: jdbc:mysql://localhost:3306/transportadora
   jpa:
@@ -25,5 +25,5 @@ spring:
     schemas:
     - transportadora
     user: root
-    password: 1298
+    password: root
     baseline-on-migrate: true

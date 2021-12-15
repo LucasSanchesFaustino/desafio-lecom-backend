@@ -6,7 +6,7 @@ Qualquer banco de dados SQL(Recomendo o [MariaDB](https://mariadb.org/download/?
 
 Qualquer IDE compatível com Maven(recomendo Eclipse ou IntelliJ).
 
-# Descrição
+# Tecnologias Utilizadas
 
 Para o backend foram utilizados as seguintes tecnologias: Stack Spring Boot/Cloud, Eureka-Server e Feign-Client.
 

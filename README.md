@@ -2,7 +2,7 @@
 Projeto de uma loja fictícia(ShopAll), modelada em 3 microsserviços(Loja, Catalogo e Transportadora).
 
 # Requisitos do Projeto
-Qualquer banco de dados SQL(Recomendo o [MariaDB](https://mariadb.org/download/?t=mariadb&p=mariadb&r=10.6.5&os=windows&cpu=x86_64&pkg=msi&m=fder)).
+Qualquer banco de dados SQL(Utilizamos o [MariaDB](https://mariadb.org/download/?t=mariadb&p=mariadb&r=10.6.5&os=windows&cpu=x86_64&pkg=msi&m=fder)).
 
 Qualquer IDE compatível com Maven(recomendo Eclipse ou IntelliJ).
 
